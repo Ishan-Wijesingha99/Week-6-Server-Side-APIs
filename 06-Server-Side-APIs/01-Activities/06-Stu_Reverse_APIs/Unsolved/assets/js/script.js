@@ -13,13 +13,18 @@ $.ajax({
 // Browser Fetch Method
 // TODO: Comment on how Fetch returns an API call
 fetch(requestUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
+.then(response => response.json())
+.then(data => {
     console.log('Fetch Response \n-------------');
     console.log(data);
-  });
+});
+
+
+
+
+
+
+
 
 // Browser XMLHttpRequest
 // TODO: Comment on how XMLHttpRequest returns an API call
