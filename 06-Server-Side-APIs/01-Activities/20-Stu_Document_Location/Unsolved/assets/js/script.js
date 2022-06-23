@@ -14,6 +14,7 @@ fetch(badRequestUrl).then(response => {
     // if response.status is 404, change the url using document.location.href
     // you can literally set this URL to anything
     document.location.href = './404.html'
+    // document.location.replace('whateverURL') would also work
   }
 
 });
