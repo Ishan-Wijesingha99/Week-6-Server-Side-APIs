@@ -1,7 +1,19 @@
 var badRequestUrl = 'https://api.github.com/unicorns';
 var redirectUrl = './404.html';
 
-fetch(badRequestUrl).then(function (response) {
-  // Use a conditional to check the response status.
-  // If that status equals the conditional, then redirect to the 404 page.
+
+
+// HOW TO DO A WEBPAGE REDIRECT
+
+fetch(badRequestUrl).then(response => {
+
+  // check if response.status is 404, if not, return the response object as usual
+  if(response.status !== 404) {
+    return response.json()
+  } else {
+    // if response.status is 404, change the url using document.location.href
+    // you can literally set this URL to anything
+    document.location.href = './404.html'
+  }
+
 });
