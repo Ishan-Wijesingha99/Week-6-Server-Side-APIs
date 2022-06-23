@@ -5,3 +5,7 @@ fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
   .then(function (data) {
     console.log(data);
   });
+
+
+// git contribution test
+let gitContributionTest1;
