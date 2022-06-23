@@ -4,7 +4,10 @@ fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
   })
   .then(function (data) {
     console.log(data);
-  });
+});
+
+
+// deconstruct parameters , query string parameters in URL for fetch
 
 
 // git contribution test
