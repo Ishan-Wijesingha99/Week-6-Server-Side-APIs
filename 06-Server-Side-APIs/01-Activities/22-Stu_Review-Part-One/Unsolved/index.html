@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Why does the `<link>` to `style.css` have to come last? -->
+  <!-- the link to style.css must come AFTER you import google fonts because you use the google fonts in the css stylesheet -->
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -15,7 +15,8 @@
 <body class="flex-column min-100-vh">
   <header class="hero">
     <h1 class="app-title">
-      <!-- TODO: What does this `<i>` element do? Where do these classes come from? -->
+      <!-- these classes come from Bootstrap. In Bootstrap, specific HTML classnames can be added to elements, these classnames prescribe a certain function or style to that HTML element  -->
+      <!-- The i element is used to access an icon. Bootstrap has many icons to choose from, a specific classname is given to the i element to render the icon of choice -->
       <i class="fab fa-github"></i> Git it Done!
     </h1>
     <p>Search for a GitHub user or click on a language to see a list of repositories and how many open issues they have!
@@ -38,7 +39,7 @@
       <div class="card">
         <h3 class="card-header text-uppercase">Search By Topic</h3>
         <div id="language-buttons" class="card-body">
-          <!-- TODO: How are the `data-language` attributes being used? -->
+          <!-- data attributes are used so that it's easier to manipulate HTML elements within JavaScript -->
           <button data-language="javascript" class="btn">JavaScript</button>
           <button data-language="html" class="btn">HTML</button>
           <button data-language="css" class="btn">CSS</button>
@@ -48,7 +49,7 @@
 
     <div class="col-12 col-md-8">
       <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
-      <!-- TODO: Why is this `<div>` empty? What goes in here? -->
+      <!-- This div begins empty, but once the user interacts with the website in a certain way, content will be rendered based off the JavaScript code -->
       <div id="repos-container" class="list-group"></div>
     </div>
   </main>

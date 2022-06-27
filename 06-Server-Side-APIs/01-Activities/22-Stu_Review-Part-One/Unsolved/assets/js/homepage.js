@@ -1,12 +1,17 @@
+// creating variables for HTML elements
 var userFormEl = document.querySelector('#user-form');
 var languageButtonsEl = document.querySelector('#language-buttons');
 var nameInputEl = document.querySelector('#username');
 var repoContainerEl = document.querySelector('#repos-container');
 var repoSearchTerm = document.querySelector('#repo-search-term');
 
+
+
 var formSubmitHandler = function (event) {
+  // preventing the default behaviour which is reloading the page
   event.preventDefault();
 
+  
   var username = nameInputEl.value.trim();
 
   if (username) {
