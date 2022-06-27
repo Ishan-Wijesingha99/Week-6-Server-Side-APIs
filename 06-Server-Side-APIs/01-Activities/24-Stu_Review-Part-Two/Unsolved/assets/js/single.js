@@ -1,20 +1,25 @@
+// creating variables for HTML elements
 var repoNameEl = document.querySelector('#repo-name');
 var issueContainerEl = document.querySelector('#issues-container');
 var limitWarningEl = document.querySelector('#limit-warning');
 
+
+
+
 var getRepoName = function () {
-  // Where is this value coming from?
-  // TODO: Write your answer here
+  // This gives the query string
   var queryString = document.location.search;
+
+  // this splits the query string wherever there is an equal sign, the result is an array, and we then take the second element of that array 
   var repoName = queryString.split('=')[1];
+
 
   if (repoName) {
     repoNameEl.textContent = repoName;
 
     getRepoIssues(repoName);
   } else {
-    // Under what condition will this run?
-    // TODO: Write your answer here
+    // if the above code doesn't execute, replace the current URL with the index.html, meaning they'll be brought back to the original page
     document.location.replace('./index.html');
   }
 };
